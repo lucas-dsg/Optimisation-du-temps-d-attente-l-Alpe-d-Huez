@@ -1,0 +1,2255 @@
+{
+  "nodes": [
+    {
+      "id": "(938400, 6448500)",
+      "x": 939100,
+      "y": 6448750
+    },
+    {
+      "id": "(940500, 6449200)",
+      "x": 940800,
+      "y": 6449500
+    },
+    {
+      "id": "(940650, 6448450)",
+      "x": 941350,
+      "y": 6447700
+    },
+    {
+      "id": "(942200, 6449100)",
+      "x": 942400,
+      "y": 6449300
+    },
+    {
+      "id": "(943400, 6449700)",
+      "x": 943450,
+      "y": 6449900
+    },
+    {
+      "id": "(942050, 6450300)",
+      "x": 942050,
+      "y": 6450300
+    },
+    {
+      "id": "(943900, 6451500)",
+      "x": 944000,
+      "y": 6451450
+    },
+    {
+      "id": "(945600, 6452000)",
+      "x": 945900,
+      "y": 6451650
+    },
+    {
+      "id": "(941150, 6452200)",
+      "x": 941500,
+      "y": 6452400
+    },
+    {
+      "id": "(943050, 6453650)",
+      "x": 943100,
+      "y": 6453650
+    },
+    {
+      "id": "(941800, 6450900)",
+      "x": 941950,
+      "y": 6450550
+    },
+    {
+      "id": "(944650, 6450550)",
+      "x": 944650,
+      "y": 6450550
+    },
+    {
+      "id": "(945300, 6450950)",
+      "x": 945400,
+      "y": 6451000
+    },
+    {
+      "id": "(943950, 6450250)",
+      "x": 944000,
+      "y": 6450200
+    },
+    {
+      "id": "(944050, 6452500)",
+      "x": 944100,
+      "y": 6452500
+    },
+    {
+      "id": "(945650, 6450350)",
+      "x": 945800,
+      "y": 6450250
+    },
+    {
+      "id": "(939650, 6448600)",
+      "x": 939700,
+      "y": 6448700
+    },
+    {
+      "id": "(942650, 6446850)",
+      "x": 942650,
+      "y": 6446850
+    },
+    {
+      "id": "(942250, 6447650)",
+      "x": 942250,
+      "y": 6447700
+    },
+    {
+      "id": "(942200, 6446150)",
+      "x": 942200,
+      "y": 6446150
+    },
+    {
+      "id": "(941450, 6444650)",
+      "x": 942200,
+      "y": 6444450
+    },
+    {
+      "id": "(942800, 6445700)",
+      "x": 942850,
+      "y": 6445700
+    },
+    {
+      "id": "(941250, 6452450)",
+      "x": 941250,
+      "y": 6452450
+    },
+    {
+      "id": "(940900, 6445550)",
+      "x": 940900,
+      "y": 6445550
+    },
+    {
+      "id": "(942000, 6449800)",
+      "x": 942050,
+      "y": 6449950
+    },
+    {
+      "id": "(943200, 6447100)",
+      "x": 943200,
+      "y": 6447100
+    },
+    {
+      "id": "(943000, 6446650)",
+      "x": 943000,
+      "y": 6446650
+    },
+    {
+      "id": "(939300, 6448700)",
+      "x": 939400,
+      "y": 6448750
+    },
+    {
+      "id": "(941800, 6449050)",
+      "x": 942000,
+      "y": 6448900
+    },
+    {
+      "id": "(940500, 6447750)",
+      "x": 940550,
+      "y": 6447750
+    },
+    {
+      "id": "(940700, 6448900)",
+      "x": 940700,
+      "y": 6448900
+    },
+    {
+      "id": "(941300, 6449600)",
+      "x": 941350,
+      "y": 6449600
+    },
+    {
+      "id": "(941150, 6450350)",
+      "x": 941200,
+      "y": 6450350
+    },
+    {
+      "id": "(941650, 6443750)",
+      "x": 941950,
+      "y": 6443700
+    },
+    {
+      "id": "(938800, 6452000)",
+      "x": 938800,
+      "y": 6452000
+    },
+    {
+      "id": "(944050, 6447150)",
+      "x": 944200,
+      "y": 6447050
+    },
+    {
+      "id": "(944050, 6448650)",
+      "x": 944200,
+      "y": 6448700
+    },
+    {
+      "id": "(941450, 6444350)",
+      "x": 941450,
+      "y": 6444350
+    },
+    {
+      "id": "(940400, 6447250)",
+      "x": 940450,
+      "y": 6447300
+    },
+    {
+      "id": "(943750, 6451150)",
+      "x": 943900,
+      "y": 6451050
+    },
+    {
+      "id": "(943100, 6452500)",
+      "x": 943100,
+      "y": 6452500
+    },
+    {
+      "id": "(942600, 6453350)",
+      "x": 942600,
+      "y": 6453350
+    },
+    {
+      "id": "(941950, 6452150)",
+      "x": 941950,
+      "y": 6452250
+    },
+    {
+      "id": "(941450, 6451750)",
+      "x": 941650,
+      "y": 6451850
+    },
+    {
+      "id": "(942550, 6447150)",
+      "x": 942550,
+      "y": 6447150
+    },
+    {
+      "id": "(942500, 6448450)",
+      "x": 942750,
+      "y": 6448650
+    },
+    {
+      "id": "(943800, 6449950)",
+      "x": 943800,
+      "y": 6449950
+    },
+    {
+      "id": "(943000, 6448350)",
+      "x": 943000,
+      "y": 6448350
+    },
+    {
+      "id": "(942950, 6449800)",
+      "x": 943000,
+      "y": 6449850
+    },
+    {
+      "id": "(939900, 6448850)",
+      "x": 939900,
+      "y": 6448850
+    },
+    {
+      "id": "(944500, 6451800)",
+      "x": 944700,
+      "y": 6451900
+    },
+    {
+      "id": "(943550, 6450350)",
+      "x": 943550,
+      "y": 6450350
+    },
+    {
+      "id": "(941250, 6445500)",
+      "x": 941550,
+      "y": 6445350
+    },
+    {
+      "id": "(942000, 6446050)",
+      "x": 942000,
+      "y": 6446050
+    },
+    {
+      "id": "(942450, 6446450)",
+      "x": 942450,
+      "y": 6446450
+    },
+    {
+      "id": "(943300, 6452400)",
+      "x": 943300,
+      "y": 6452400
+    },
+    {
+      "id": "(943350, 6448450)",
+      "x": 943350,
+      "y": 6448450
+    },
+    {
+      "id": "(942250, 6448650)",
+      "x": 942250,
+      "y": 6448650
+    },
+    {
+      "id": "(944950, 6451900)",
+      "x": 944950,
+      "y": 6451900
+    },
+    {
+      "id": "(942450, 6449500)",
+      "x": 942450,
+      "y": 6449500
+    },
+    {
+      "id": "(946400, 6447600)",
+      "x": 946400,
+      "y": 6447600
+    },
+    {
+      "id": "(940100, 6449300)",
+      "x": 940100,
+      "y": 6449300
+    },
+    {
+      "id": "(942950, 6450200)",
+      "x": 942950,
+      "y": 6450200
+    },
+    {
+      "id": "(945850, 6450450)",
+      "x": 945850,
+      "y": 6450450
+    },
+    {
+      "id": "(941800, 6445150)",
+      "x": 941800,
+      "y": 6445150
+    },
+    {
+      "id": "(945300, 6446950)",
+      "x": 945300,
+      "y": 6446950
+    },
+    {
+      "id": "(942350, 6445850)",
+      "x": 942350,
+      "y": 6445850
+    },
+    {
+      "id": "(944250, 6451850)",
+      "x": 944250,
+      "y": 6451850
+    },
+    {
+      "id": "(942850, 6446500)",
+      "x": 942850,
+      "y": 6446500
+    },
+    {
+      "id": "(941050, 6448750)",
+      "x": 941050,
+      "y": 6448750
+    },
+    {
+      "id": "(939500, 6448450)",
+      "x": 939500,
+      "y": 6448450
+    },
+    {
+      "id": "(941050, 6449800)",
+      "x": 941050,
+      "y": 6449800
+    },
+    {
+      "id": "(941850, 6445900)",
+      "x": 941850,
+      "y": 6445900
+    }
+  ],
+  "edges": [
+    {
+      "source": "(938400, 6448500)",
+      "target": "(940500, 6449200)",
+      "name": "Le Villarais",
+      "type": "remontee",
+      "longueur_m": 1776.401774600076,
+      "denivele_m": 0,
+      "duree_min": 5.92133924866692,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(938400, 6448500)",
+      "target": "(938400, 6448500)",
+      "name": "Villard",
+      "type": "piste",
+      "longueur_m": 417.4577641303775,
+      "denivele_m": 0,
+      "duree_min": 0.8697036752716197,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy",
+      "aerialway": "magic_carpet"
+    },
+    {
+      "source": "(938400, 6448500)",
+      "target": "(939300, 6448700)",
+      "name": "Langaret",
+      "type": "remontee",
+      "longueur_m": 565.2914852965692,
+      "denivele_m": 0,
+      "duree_min": 1.884304950988564,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(940500, 6449200)",
+      "target": "(939900, 6448850)",
+      "name": "Les Vallons",
+      "type": "piste",
+      "longueur_m": 864.250374038834,
+      "denivele_m": 0,
+      "duree_min": 1.8005216125809043,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(940500, 6449200)",
+      "target": "(940650, 6448450)",
+      "name": "Piste injectée",
+      "type": "piste",
+      "longueur_m": 565.0083519013489,
+      "denivele_m": 0,
+      "duree_min": 1.17710073312781,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": NaN
+    },
+    {
+      "source": "(940500, 6449200)",
+      "target": "(940500, 6449200)",
+      "name": "Tunnel de Marcel",
+      "type": "piste",
+      "longueur_m": 16.25588599879046,
+      "denivele_m": 0,
+      "duree_min": 0.0338664291641468,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(940500, 6449200)",
+      "target": "(939650, 6448600)",
+      "name": "Petit Prince",
+      "type": "piste",
+      "longueur_m": 1158.4083505983099,
+      "denivele_m": 0,
+      "duree_min": 2.4133507304131454,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(940500, 6449200)",
+      "target": "(939500, 6448450)",
+      "name": "Villard",
+      "type": "piste",
+      "longueur_m": 1335.8039924541613,
+      "denivele_m": 0,
+      "duree_min": 2.7829249842795027,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(942200, 6449100)",
+      "name": "Romains",
+      "type": "remontee",
+      "longueur_m": 1603.965332306086,
+      "denivele_m": 0,
+      "duree_min": 5.346551107686953,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(943400, 6449700)",
+      "name": "Marmottes 1",
+      "type": "remontee",
+      "longueur_m": 2156.624797793443,
+      "denivele_m": 0,
+      "duree_min": 7.188749325978144,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "mixed_lift"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(940650, 6448450)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 229.95009605959905,
+      "denivele_m": 0,
+      "duree_min": 0.4790627001241647,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "magic_carpet",
+      "difficulty": NaN
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(942000, 6449800)",
+      "name": "Babars",
+      "type": "remontee",
+      "longueur_m": 782.1184688020846,
+      "denivele_m": 0,
+      "duree_min": 2.6070615626736156,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(940500, 6449200)",
+      "name": "Signal",
+      "type": "remontee",
+      "longueur_m": 756.9925659459342,
+      "denivele_m": 0,
+      "duree_min": 2.523308553153114,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "mixed_lift"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(942050, 6450300)",
+      "name": "Jeux",
+      "type": "remontee",
+      "longueur_m": 1306.6687342805012,
+      "denivele_m": 0,
+      "duree_min": 4.35556244760167,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "mixed_lift"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(941800, 6449050)",
+      "name": "Rif Nel 1",
+      "type": "remontee",
+      "longueur_m": 676.5320419908118,
+      "denivele_m": 0,
+      "duree_min": 2.2551068066360394,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(940700, 6448900)",
+      "name": "Stade",
+      "type": "remontee",
+      "longueur_m": 635.8575144747256,
+      "denivele_m": 0,
+      "duree_min": 2.119525048249085,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(940400, 6447250)",
+      "name": "Village",
+      "type": "piste",
+      "longueur_m": 1978.9709812053945,
+      "denivele_m": 0,
+      "duree_min": 4.122856210844572,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(940650, 6448450)",
+      "target": "(940500, 6447750)",
+      "name": "Huez",
+      "type": "piste",
+      "longueur_m": 628.8324678307557,
+      "denivele_m": 0,
+      "duree_min": 1.3100676413140744,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942200, 6449100)",
+      "target": "(942050, 6450300)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 659.4239719813256,
+      "denivele_m": 0,
+      "duree_min": 1.3737999416277618,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942200, 6449100)",
+      "target": "(942200, 6449100)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 121.76711158917315,
+      "denivele_m": 0,
+      "duree_min": 0.2536814824774441,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942200, 6449100)",
+      "target": "(940650, 6448450)",
+      "name": "Lac Blanc",
+      "type": "piste",
+      "longueur_m": 851.2935165028175,
+      "denivele_m": 0,
+      "duree_min": 1.7735281593808698,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942200, 6449100)",
+      "target": "(941800, 6449050)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 188.34127307190624,
+      "denivele_m": 0,
+      "duree_min": 0.39237765223313803,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942200, 6449100)",
+      "target": "(942500, 6448450)",
+      "name": "Olympique",
+      "type": "piste",
+      "longueur_m": 404.33129035700375,
+      "denivele_m": 0,
+      "duree_min": 0.8423568549104244,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943400, 6449700)",
+      "target": "(943400, 6449700)",
+      "name": "Boulevard des Marmottes",
+      "type": "piste",
+      "longueur_m": 21.33450390157456,
+      "denivele_m": 0,
+      "duree_min": 0.04444688312828034,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(943400, 6449700)",
+      "target": "(944650, 6450550)",
+      "name": "Marmottes 2",
+      "type": "remontee",
+      "longueur_m": 1416.4726222939319,
+      "denivele_m": 0,
+      "duree_min": 4.72157540764644,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(943400, 6449700)",
+      "target": "(942200, 6449100)",
+      "name": "Olympique",
+      "type": "piste",
+      "longueur_m": 1074.1206131635101,
+      "denivele_m": 0,
+      "duree_min": 2.2377512774239796,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943400, 6449700)",
+      "target": "(942950, 6449800)",
+      "name": "Poutat",
+      "type": "piste",
+      "longueur_m": 463.67670482682394,
+      "denivele_m": 0,
+      "duree_min": 0.9659931350558832,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(943900, 6451500)",
+      "name": "Pic Blanc 2",
+      "type": "remontee",
+      "longueur_m": 1962.7384601206888,
+      "denivele_m": 0,
+      "duree_min": 6.542461533735629,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(943950, 6450250)",
+      "name": "Lièvre Blanc",
+      "type": "remontee",
+      "longueur_m": 1432.1205925474994,
+      "denivele_m": 0,
+      "duree_min": 4.7737353084916645,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(942050, 6450300)",
+      "name": "Chavannus",
+      "type": "piste",
+      "longueur_m": 682.8171639197517,
+      "denivele_m": 0,
+      "duree_min": 1.4225357581661493,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(942200, 6449100)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 650.557908213895,
+      "denivele_m": 0,
+      "duree_min": 1.3553289754456146,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(940650, 6448450)",
+      "name": "Agneaux",
+      "type": "piste",
+      "longueur_m": 2233.2299565612034,
+      "denivele_m": 0,
+      "duree_min": 4.652562409502507,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(941800, 6450900)",
+      "name": "Variante Poutran",
+      "type": "piste",
+      "longueur_m": 277.1232615866804,
+      "denivele_m": 0,
+      "duree_min": 0.5773401283055842,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(942450, 6449500)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 391.544002599999,
+      "denivele_m": 0,
+      "duree_min": 0.8157166720833312,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(941300, 6449600)",
+      "name": "Chardons",
+      "type": "piste",
+      "longueur_m": 1246.2537042185213,
+      "denivele_m": 0,
+      "duree_min": 2.5963618837885862,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942050, 6450300)",
+      "target": "(942000, 6449800)",
+      "name": "Babars",
+      "type": "piste",
+      "longueur_m": 385.75405679789566,
+      "denivele_m": 0,
+      "duree_min": 0.803654284995616,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(943900, 6451500)",
+      "target": "(945600, 6452000)",
+      "name": "Pic Blanc 3",
+      "type": "remontee",
+      "longueur_m": 2007.1718007103918,
+      "denivele_m": 0,
+      "duree_min": 6.69057266903464,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "cable_car"
+    },
+    {
+      "source": "(943900, 6451500)",
+      "target": "(943900, 6451500)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 115.49931585109724,
+      "denivele_m": 0,
+      "duree_min": 0.2406235746897859,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943900, 6451500)",
+      "target": "(942050, 6450300)",
+      "name": "Chamois",
+      "type": "piste",
+      "longueur_m": 2347.412949567382,
+      "denivele_m": 0,
+      "duree_min": 4.890443644932046,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943900, 6451500)",
+      "target": "(943750, 6451150)",
+      "name": "Le Belvédère",
+      "type": "piste",
+      "longueur_m": 363.65881617434013,
+      "denivele_m": 0,
+      "duree_min": 0.757622533696542,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943900, 6451500)",
+      "target": "(943300, 6452400)",
+      "name": "Bartavelles",
+      "type": "piste",
+      "longueur_m": 1688.5873835492087,
+      "denivele_m": 0,
+      "duree_min": 3.5178903823941847,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(945600, 6452000)",
+      "target": "(944500, 6451800)",
+      "name": "Tunnel",
+      "type": "piste",
+      "longueur_m": 1373.328208839138,
+      "denivele_m": 0,
+      "duree_min": 2.8611004350815374,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(945600, 6452000)",
+      "target": "(943900, 6451500)",
+      "name": "La Brèche",
+      "type": "piste",
+      "longueur_m": 2068.346904821118,
+      "denivele_m": 0,
+      "duree_min": 4.309056051710663,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(945600, 6452000)",
+      "target": "(945600, 6452000)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 407.8825750606005,
+      "denivele_m": 0,
+      "duree_min": 0.8497553647095845,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(945600, 6452000)",
+      "target": "(946400, 6447600)",
+      "name": "Sarenne",
+      "type": "piste",
+      "longueur_m": 5365.3743782142665,
+      "denivele_m": 0,
+      "duree_min": 11.177863287946389,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(941150, 6452200)",
+      "target": "(943050, 6453650)",
+      "name": "TC Alpette",
+      "type": "remontee",
+      "longueur_m": 1853.1533412259332,
+      "denivele_m": 0,
+      "duree_min": 6.177177804086444,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(941150, 6452200)",
+      "target": "(941800, 6450900)",
+      "name": "Poutran 1",
+      "type": "remontee",
+      "longueur_m": 1478.971747278113,
+      "denivele_m": 0,
+      "duree_min": 4.929905824260377,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(941150, 6452200)",
+      "target": "(941150, 6452200)",
+      "name": "L'Olmet",
+      "type": "piste",
+      "longueur_m": 256.17175649919307,
+      "denivele_m": 0,
+      "duree_min": 0.5336911593733189,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "magic_carpet",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941150, 6452200)",
+      "target": "(941250, 6452450)",
+      "name": "Canetons",
+      "type": "piste",
+      "longueur_m": 312.26962325457123,
+      "denivele_m": 0,
+      "duree_min": 0.6505617151136901,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(943050, 6453650)",
+      "target": "(944050, 6452500)",
+      "name": "Alpette-Rousses",
+      "type": "remontee",
+      "longueur_m": 1473.941862879675,
+      "denivele_m": 0,
+      "duree_min": 4.91313954293225,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "cable_car"
+    },
+    {
+      "source": "(941800, 6450900)",
+      "target": "(941800, 6450900)",
+      "name": "L'Olmet",
+      "type": "piste",
+      "longueur_m": 78.54149766388585,
+      "denivele_m": 0,
+      "duree_min": 0.16362812013309552,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941800, 6450900)",
+      "target": "(942050, 6450300)",
+      "name": "Poutran 2",
+      "type": "remontee",
+      "longueur_m": 1083.5432950160377,
+      "denivele_m": 0,
+      "duree_min": 3.6118109833867926,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(941800, 6450900)",
+      "target": "(941950, 6452150)",
+      "name": "Champ Clotury",
+      "type": "piste",
+      "longueur_m": 1324.3430941477227,
+      "denivele_m": 0,
+      "duree_min": 2.7590481128077555,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(941800, 6450900)",
+      "target": "(941450, 6451750)",
+      "name": "L'Olmet",
+      "type": "piste",
+      "longueur_m": 759.4629745830646,
+      "denivele_m": 0,
+      "duree_min": 1.5822145303813846,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(944650, 6450550)",
+      "target": "(943950, 6450250)",
+      "name": "Balcons",
+      "type": "piste",
+      "longueur_m": 1119.3739173740905,
+      "denivele_m": 0,
+      "duree_min": 2.332028994529355,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(944650, 6450550)",
+      "target": "(943350, 6448450)",
+      "name": "Combe Charbonnière",
+      "type": "piste",
+      "longueur_m": 3204.2721235425956,
+      "denivele_m": 0,
+      "duree_min": 6.675566924047074,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(944650, 6450550)",
+      "target": "(944650, 6450550)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 40.20350249905394,
+      "denivele_m": 0,
+      "duree_min": 0.08375729687302905,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(944650, 6450550)",
+      "target": "(945300, 6450950)",
+      "name": "Marmottes 3",
+      "type": "remontee",
+      "longueur_m": 735.6802453188675,
+      "denivele_m": 0,
+      "duree_min": 2.452267484396225,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "cable_car"
+    },
+    {
+      "source": "(945300, 6450950)",
+      "target": "(945300, 6450950)",
+      "name": NaN,
+      "type": "remontee",
+      "longueur_m": 208.62282878932083,
+      "denivele_m": 0,
+      "duree_min": 0.6954094292977361,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy",
+      "aerialway": "goods"
+    },
+    {
+      "source": "(945300, 6450950)",
+      "target": "(945650, 6450350)",
+      "name": "Cristaux",
+      "type": "piste",
+      "longueur_m": 1027.8912677209887,
+      "denivele_m": 0,
+      "duree_min": 2.141440141085393,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(945300, 6450950)",
+      "target": "(945850, 6450450)",
+      "name": "Herpie",
+      "type": "piste",
+      "longueur_m": 1075.3591463383013,
+      "denivele_m": 0,
+      "duree_min": 2.240331554871461,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(945300, 6450950)",
+      "target": "(945600, 6452000)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 779.7364751068412,
+      "denivele_m": 0,
+      "duree_min": 1.6244509898059192,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(943950, 6450250)",
+      "target": "(943950, 6450250)",
+      "name": "Déversoir",
+      "type": "piste",
+      "longueur_m": 65.00477284532602,
+      "denivele_m": 0,
+      "duree_min": 0.1354266100944292,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943950, 6450250)",
+      "target": "(943800, 6449950)",
+      "name": "Déversoir",
+      "type": "piste",
+      "longueur_m": 656.2493191652424,
+      "denivele_m": 0,
+      "duree_min": 1.367186081594255,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943950, 6450250)",
+      "target": "(943550, 6450350)",
+      "name": "Lièvre Blanc",
+      "type": "piste",
+      "longueur_m": 569.2714620790902,
+      "denivele_m": 0,
+      "duree_min": 1.1859822126647712,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(944050, 6452500)",
+      "target": "(943900, 6451500)",
+      "name": "Le Dôme",
+      "type": "piste",
+      "longueur_m": 1267.685772322265,
+      "denivele_m": 0,
+      "duree_min": 2.6410120256713854,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(945650, 6450350)",
+      "target": "(945300, 6450950)",
+      "name": "Herpie",
+      "type": "remontee",
+      "longueur_m": 938.6987368352416,
+      "denivele_m": 0,
+      "duree_min": 3.1289957894508054,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(945650, 6450350)",
+      "target": "(945650, 6450350)",
+      "name": "Herpie",
+      "type": "piste",
+      "longueur_m": 104.51352260146868,
+      "denivele_m": 0,
+      "duree_min": 0.21773650541972642,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(939650, 6448600)",
+      "target": "(940500, 6449200)",
+      "name": "Petit Prince",
+      "type": "remontee",
+      "longueur_m": 1049.8140901966412,
+      "denivele_m": 0,
+      "duree_min": 3.4993803006554707,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(939650, 6448600)",
+      "target": "(939650, 6448600)",
+      "name": "Villard",
+      "type": "piste",
+      "longueur_m": 64.74413216148969,
+      "denivele_m": 0,
+      "duree_min": 0.13488360866977017,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(939650, 6448600)",
+      "target": "(939300, 6448700)",
+      "name": "Mur",
+      "type": "piste",
+      "longueur_m": 260.4476538502619,
+      "denivele_m": 0,
+      "duree_min": 0.5425992788547123,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942650, 6446850)",
+      "target": "(942250, 6447650)",
+      "name": "Alpauris",
+      "type": "remontee",
+      "longueur_m": 856.23094380081,
+      "denivele_m": 0,
+      "duree_min": 2.8541031460027,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942650, 6446850)",
+      "target": "(942200, 6446150)",
+      "name": "Louvets",
+      "type": "remontee",
+      "longueur_m": 832.4712089968085,
+      "denivele_m": 0,
+      "duree_min": 2.774904029989362,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942650, 6446850)",
+      "target": "(942800, 6445700)",
+      "name": "Fontfroide",
+      "type": "remontee",
+      "longueur_m": 1228.8938823669869,
+      "denivele_m": 0,
+      "duree_min": 4.09631294122329,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942650, 6446850)",
+      "target": "(942650, 6446850)",
+      "name": "Les Demoiselles",
+      "type": "piste",
+      "longueur_m": 107.47547265883819,
+      "denivele_m": 0,
+      "duree_min": 0.2239072347059129,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942250, 6447650)",
+      "target": "(942250, 6447650)",
+      "name": "Alpauris",
+      "type": "remontee",
+      "longueur_m": 29.394153761841203,
+      "denivele_m": 0,
+      "duree_min": 0.09798051253947068,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942250, 6447650)",
+      "target": "(940650, 6448450)",
+      "name": "Alpauris",
+      "type": "remontee",
+      "longueur_m": 411.5165799786108,
+      "denivele_m": 0,
+      "duree_min": 1.371721933262036,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942200, 6446150)",
+      "target": "(942650, 6446850)",
+      "name": "Éterlous",
+      "type": "piste",
+      "longueur_m": 1135.051867513997,
+      "denivele_m": 0,
+      "duree_min": 2.3646913906541602,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(942200, 6446150)",
+      "target": "(941450, 6444650)",
+      "name": "Col",
+      "type": "piste",
+      "longueur_m": 2081.961069681975,
+      "denivele_m": 0,
+      "duree_min": 4.3374188951707815,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(942200, 6446150)",
+      "target": "(942450, 6446450)",
+      "name": "Chemin des Demoiselles",
+      "type": "piste",
+      "longueur_m": 377.03215276622956,
+      "denivele_m": 0,
+      "duree_min": 0.7854836515963116,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941450, 6444650)",
+      "target": "(942200, 6446150)",
+      "name": "Auris Express",
+      "type": "remontee",
+      "longueur_m": 1706.3721857089151,
+      "denivele_m": 0,
+      "duree_min": 5.687907285696384,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(941450, 6444650)",
+      "target": "(941450, 6444650)",
+      "name": "Retour residence Ecrins d'Auris",
+      "type": "piste",
+      "longueur_m": 283.24131211154975,
+      "denivele_m": 0,
+      "duree_min": 0.590086066899062,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": NaN,
+      "aerialway": "magic_carpet"
+    },
+    {
+      "source": "(941450, 6444650)",
+      "target": "(940900, 6445550)",
+      "name": "Farcis",
+      "type": "piste",
+      "longueur_m": 1403.5856543959271,
+      "denivele_m": 0,
+      "duree_min": 2.924136779991515,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(941450, 6444650)",
+      "target": "(941250, 6445500)",
+      "name": "La Fuma",
+      "type": "piste",
+      "longueur_m": 596.1416582707735,
+      "denivele_m": 0,
+      "duree_min": 1.2419617880641114,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "expert"
+    },
+    {
+      "source": "(941450, 6444650)",
+      "target": "(941800, 6445150)",
+      "name": "Les Rhodos",
+      "type": "piste",
+      "longueur_m": 291.27458619426216,
+      "denivele_m": 0,
+      "duree_min": 0.6068220545713795,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942800, 6445700)",
+      "target": "(942650, 6446850)",
+      "name": "Fontfroide",
+      "type": "piste",
+      "longueur_m": 1209.3111928867513,
+      "denivele_m": 0,
+      "duree_min": 2.519398318514065,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942800, 6445700)",
+      "target": "(944050, 6447150)",
+      "name": "Col de Cluy",
+      "type": "piste",
+      "longueur_m": 2335.0227894324976,
+      "denivele_m": 0,
+      "duree_min": 4.864630811317704,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(942800, 6445700)",
+      "target": "(942000, 6446050)",
+      "name": "Le Rosai",
+      "type": "piste",
+      "longueur_m": 1140.0590580466755,
+      "denivele_m": 0,
+      "duree_min": 2.3751230375972407,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942800, 6445700)",
+      "target": "(943000, 6446650)",
+      "name": "Bergeries",
+      "type": "piste",
+      "longueur_m": 1032.1713822201696,
+      "denivele_m": 0,
+      "duree_min": 2.15035704629202,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(942800, 6445700)",
+      "target": "(942800, 6445700)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 17.272745048919756,
+      "denivele_m": 0,
+      "duree_min": 0.035984885518582824,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": NaN
+    },
+    {
+      "source": "(941250, 6452450)",
+      "target": "(941150, 6452200)",
+      "name": "Clos du Pré",
+      "type": "remontee",
+      "longueur_m": 248.8827883275707,
+      "denivele_m": 0,
+      "duree_min": 0.8296092944252357,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(940900, 6445550)",
+      "target": "(941450, 6444650)",
+      "name": "Maronne",
+      "type": "remontee",
+      "longueur_m": 881.4891057600797,
+      "denivele_m": 0,
+      "duree_min": 2.9382970192002658,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(942000, 6449800)",
+      "target": "(940650, 6448450)",
+      "name": "Babars",
+      "type": "piste",
+      "longueur_m": 770.4542048849687,
+      "denivele_m": 0,
+      "duree_min": 1.6051129268436848,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942000, 6449800)",
+      "target": "(942000, 6449800)",
+      "name": "Babars",
+      "type": "piste",
+      "longueur_m": 165.43091136496957,
+      "denivele_m": 0,
+      "duree_min": 0.34464773201035326,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(943200, 6447100)",
+      "target": "(943000, 6446650)",
+      "name": "Lombards",
+      "type": "remontee",
+      "longueur_m": 588.3939433459251,
+      "denivele_m": 0,
+      "duree_min": 1.961313144486417,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(943000, 6446650)",
+      "target": "(943200, 6447100)",
+      "name": "Lys",
+      "type": "piste",
+      "longueur_m": 994.1939725342656,
+      "denivele_m": 0,
+      "duree_min": 2.07123744277972,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(943000, 6446650)",
+      "target": "(943000, 6446650)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 13.096346695071981,
+      "denivele_m": 0,
+      "duree_min": 0.027284055614733294,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": NaN
+    },
+    {
+      "source": "(943000, 6446650)",
+      "target": "(944050, 6447150)",
+      "name": "Le Gua",
+      "type": "piste",
+      "longueur_m": 1164.131381660855,
+      "denivele_m": 0,
+      "duree_min": 2.4252737117934475,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(939300, 6448700)",
+      "target": "(938400, 6448500)",
+      "name": "Mur",
+      "type": "piste",
+      "longueur_m": 443.71792697810884,
+      "denivele_m": 0,
+      "duree_min": 0.9244123478710601,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941800, 6449050)",
+      "target": "(941800, 6449050)",
+      "name": "Chez Roger",
+      "type": "piste",
+      "longueur_m": 79.81573898045698,
+      "denivele_m": 0,
+      "duree_min": 0.16628278954261871,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola",
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941800, 6449050)",
+      "target": "(942050, 6450300)",
+      "name": "Rif Nel 2",
+      "type": "remontee",
+      "longueur_m": 989.5512236789704,
+      "denivele_m": 0,
+      "duree_min": 3.298504078929901,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(941800, 6449050)",
+      "target": "(940650, 6448450)",
+      "name": "Les Clarines",
+      "type": "piste",
+      "longueur_m": 366.66804859334695,
+      "denivele_m": 0,
+      "duree_min": 0.7638917679028061,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941800, 6449050)",
+      "target": "(942250, 6448650)",
+      "name": "Retour Club Med",
+      "type": "piste",
+      "longueur_m": 373.16182712781017,
+      "denivele_m": 0,
+      "duree_min": 0.7774204731829378,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(940500, 6447750)",
+      "target": "(940650, 6448450)",
+      "name": "Huez Express",
+      "type": "remontee",
+      "longueur_m": 660.007137582805,
+      "denivele_m": 0,
+      "duree_min": 2.2000237919426833,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(940500, 6447750)",
+      "target": "(940500, 6447750)",
+      "name": "Huez",
+      "type": "piste",
+      "longueur_m": 7.439444840898666,
+      "denivele_m": 0,
+      "duree_min": 0.015498843418538888,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941300, 6449600)",
+      "target": "(941150, 6450350)",
+      "name": "Poutran",
+      "type": "remontee",
+      "longueur_m": 763.5091119131397,
+      "denivele_m": 0,
+      "duree_min": 2.545030373043799,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter"
+    },
+    {
+      "source": "(941300, 6449600)",
+      "target": "(941300, 6449600)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 23.43516673197137,
+      "denivele_m": 0,
+      "duree_min": 0.048823264024940354,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941150, 6450350)",
+      "target": "(941150, 6450350)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 11.217619001008497,
+      "denivele_m": 0,
+      "duree_min": 0.02337003958543437,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": NaN
+    },
+    {
+      "source": "(941150, 6450350)",
+      "target": "(940650, 6448450)",
+      "name": "Violettes",
+      "type": "piste",
+      "longueur_m": 1063.3750356657843,
+      "denivele_m": 0,
+      "duree_min": 2.2153646576370507,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941650, 6443750)",
+      "target": "(941650, 6443750)",
+      "name": "Les Bûcherons",
+      "type": "piste",
+      "longueur_m": 387.5965445044423,
+      "denivele_m": 0,
+      "duree_min": 0.8074928010509215,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "platter",
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941650, 6443750)",
+      "target": "(941450, 6444650)",
+      "name": "Marmottes",
+      "type": "piste",
+      "longueur_m": 700.3673044001947,
+      "denivele_m": 0,
+      "duree_min": 1.459098550833739,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(938800, 6452000)",
+      "target": "(941150, 6452200)",
+      "name": "Eau d'Olle Express",
+      "type": "remontee",
+      "longueur_m": 2694.952284651728,
+      "denivele_m": 0,
+      "duree_min": 8.983174282172426,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(944050, 6447150)",
+      "target": "(944050, 6448650)",
+      "name": "Chalvet",
+      "type": "remontee",
+      "longueur_m": 1454.3010477071662,
+      "denivele_m": 0,
+      "duree_min": 4.847670159023887,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "chair_lift"
+    },
+    {
+      "source": "(944050, 6447150)",
+      "target": "(942550, 6447150)",
+      "name": "Le Gua",
+      "type": "piste",
+      "longueur_m": 1804.7670813012508,
+      "denivele_m": 0,
+      "duree_min": 3.759931419377606,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(944050, 6447150)",
+      "target": "(944050, 6447150)",
+      "name": "Le Gua",
+      "type": "piste",
+      "longueur_m": 15.683187470279607,
+      "denivele_m": 0,
+      "duree_min": 0.032673307229749184,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(944050, 6448650)",
+      "target": "(942500, 6448450)",
+      "name": "Campanules",
+      "type": "piste",
+      "longueur_m": 1549.914207404632,
+      "denivele_m": 0,
+      "duree_min": 3.2289879320929833,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(944050, 6448650)",
+      "target": "(944050, 6448650)",
+      "name": "Combe Charbonnière",
+      "type": "piste",
+      "longueur_m": 191.99229094485167,
+      "denivele_m": 0,
+      "duree_min": 0.39998393946844096,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(941450, 6444350)",
+      "target": "(941450, 6444650)",
+      "name": "Stade",
+      "type": "piste",
+      "longueur_m": 576.9671361260254,
+      "denivele_m": 0,
+      "duree_min": 1.2020148669292194,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "mixed_lift",
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941450, 6444350)",
+      "target": "(941650, 6443750)",
+      "name": "Les Bûcherons",
+      "type": "piste",
+      "longueur_m": 701.2124644731571,
+      "denivele_m": 0,
+      "duree_min": 1.4608593009857438,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(940400, 6447250)",
+      "target": "(940500, 6447750)",
+      "name": "Huez Express",
+      "type": "remontee",
+      "longueur_m": 477.4450347798102,
+      "denivele_m": 0,
+      "duree_min": 1.5914834492660341,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "aerialway": "gondola"
+    },
+    {
+      "source": "(943750, 6451150)",
+      "target": "(943050, 6453650)",
+      "name": "Rousses",
+      "type": "piste",
+      "longueur_m": 2699.1286352577094,
+      "denivele_m": 0,
+      "duree_min": 5.623184656786894,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943750, 6451150)",
+      "target": "(943750, 6451150)",
+      "name": "Chamois",
+      "type": "piste",
+      "longueur_m": 67.3715260607068,
+      "denivele_m": 0,
+      "duree_min": 0.14035734595980584,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943100, 6452500)",
+      "target": "(942600, 6453350)",
+      "name": "Bartavelles",
+      "type": "piste",
+      "longueur_m": 1080.0901065779012,
+      "denivele_m": 0,
+      "duree_min": 2.2501877220372943,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942600, 6453350)",
+      "target": "(941950, 6452150)",
+      "name": "L'Alpette",
+      "type": "piste",
+      "longueur_m": 1338.5621038565193,
+      "denivele_m": 0,
+      "duree_min": 2.788671049701082,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941950, 6452150)",
+      "target": "(941450, 6451750)",
+      "name": "L'Alpette",
+      "type": "piste",
+      "longueur_m": 498.72410836885587,
+      "denivele_m": 0,
+      "duree_min": 1.039008559101783,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941950, 6452150)",
+      "target": "(941150, 6452200)",
+      "name": "Roche Noire",
+      "type": "piste",
+      "longueur_m": 527.4741110955209,
+      "denivele_m": 0,
+      "duree_min": 1.0989043981156685,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(941450, 6451750)",
+      "target": "(941150, 6452200)",
+      "name": "L'Olmet",
+      "type": "piste",
+      "longueur_m": 240.87350736970575,
+      "denivele_m": 0,
+      "duree_min": 0.5018198070202203,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(941450, 6451750)",
+      "target": "(941450, 6451750)",
+      "name": "L'Alpette",
+      "type": "piste",
+      "longueur_m": 223.72268023899116,
+      "denivele_m": 0,
+      "duree_min": 0.4660889171645649,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942550, 6447150)",
+      "target": "(942550, 6447150)",
+      "name": "Le Gua",
+      "type": "piste",
+      "longueur_m": 7.219187085171048,
+      "denivele_m": 0,
+      "duree_min": 0.01503997309410635,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(942500, 6448450)",
+      "target": "(940650, 6448450)",
+      "name": "Altiport",
+      "type": "piste",
+      "longueur_m": 499.8774590989759,
+      "denivele_m": 0,
+      "duree_min": 1.0414113731228665,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(942500, 6448450)",
+      "target": "(942500, 6448450)",
+      "name": "Altiport",
+      "type": "piste",
+      "longueur_m": 294.44857311053175,
+      "denivele_m": 0,
+      "duree_min": 0.6134345273136078,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(943800, 6449950)",
+      "target": "(943000, 6448350)",
+      "name": "La Balme",
+      "type": "piste",
+      "longueur_m": 1842.90214330437,
+      "denivele_m": 0,
+      "duree_min": 3.8393794652174376,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(943800, 6449950)",
+      "target": "(943400, 6449700)",
+      "name": "Déversoir",
+      "type": "piste",
+      "longueur_m": 309.8837319726325,
+      "denivele_m": 0,
+      "duree_min": 0.6455911082763177,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(944500, 6451800)",
+      "target": "(943900, 6451500)",
+      "name": "Tunnel",
+      "type": "piste",
+      "longueur_m": 560.4810438313449,
+      "denivele_m": 0,
+      "duree_min": 1.1676688413153018,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(944500, 6451800)",
+      "target": "(944250, 6451850)",
+      "name": "Tunnel",
+      "type": "piste",
+      "longueur_m": 477.5690595592883,
+      "denivele_m": 0,
+      "duree_min": 0.9949355407485173,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(943550, 6450350)",
+      "target": "(943400, 6449700)",
+      "name": "Boulevard des Marmottes",
+      "type": "piste",
+      "longueur_m": 547.9556111951092,
+      "denivele_m": 0,
+      "duree_min": 1.1415741899898109,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(941250, 6445500)",
+      "target": "(941250, 6445500)",
+      "name": "Farcis",
+      "type": "piste",
+      "longueur_m": 464.55293652910626,
+      "denivele_m": 0,
+      "duree_min": 0.9678186177689714,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(942450, 6446450)",
+      "target": "(942650, 6446850)",
+      "name": "Chemin des Demoiselles",
+      "type": "piste",
+      "longueur_m": 491.0913467523909,
+      "denivele_m": 0,
+      "duree_min": 1.0231069724008144,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(943300, 6452400)",
+      "target": "(943100, 6452500)",
+      "name": "Bartavelles",
+      "type": "piste",
+      "longueur_m": 231.83448742009068,
+      "denivele_m": 0,
+      "duree_min": 0.4829885154585222,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(943350, 6448450)",
+      "target": "(944050, 6447150)",
+      "name": "La Mine",
+      "type": "piste",
+      "longueur_m": 1892.8671668302613,
+      "denivele_m": 0,
+      "duree_min": 3.943473264229711,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942250, 6448650)",
+      "target": "(940650, 6448450)",
+      "name": "Mélèzes",
+      "type": "piste",
+      "longueur_m": 400.95152436820854,
+      "denivele_m": 0,
+      "duree_min": 0.8353156757671011,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(944950, 6451900)",
+      "target": "(944500, 6451800)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 385.0418213443221,
+      "denivele_m": 0,
+      "duree_min": 0.8021704611340044,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(946400, 6447600)",
+      "target": "(946400, 6447600)",
+      "name": NaN,
+      "type": "piste",
+      "longueur_m": 9.56621316943894,
+      "denivele_m": 0,
+      "duree_min": 0.01992961076966446,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(946400, 6447600)",
+      "target": "(945300, 6446950)",
+      "name": "Sarenne",
+      "type": "piste",
+      "longueur_m": 1487.5683304645845,
+      "denivele_m": 0,
+      "duree_min": 3.0991006884678844,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(940100, 6449300)",
+      "target": "(938400, 6448500)",
+      "name": "La Forêt",
+      "type": "piste",
+      "longueur_m": 1295.7843127445547,
+      "denivele_m": 0,
+      "duree_min": 2.6995506515511556,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(942950, 6450200)",
+      "target": "(942050, 6450300)",
+      "name": "Chamois",
+      "type": "piste",
+      "longueur_m": 671.9018746029108,
+      "denivele_m": 0,
+      "duree_min": 1.3997955720893975,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(945850, 6450450)",
+      "target": "(945850, 6450450)",
+      "name": "Herpie",
+      "type": "piste",
+      "longueur_m": 90.0010393377778,
+      "denivele_m": 0,
+      "duree_min": 0.1875021652870371,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(945850, 6450450)",
+      "target": "(945650, 6450350)",
+      "name": "Herpie",
+      "type": "piste",
+      "longueur_m": 326.79192457988194,
+      "denivele_m": 0,
+      "duree_min": 0.6808165095414207,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(945300, 6446950)",
+      "target": "(945300, 6446950)",
+      "name": "Sarenne",
+      "type": "piste",
+      "longueur_m": 17.216952056670923,
+      "denivele_m": 0,
+      "duree_min": 0.03586865011806442,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(945300, 6446950)",
+      "target": "(944050, 6447150)",
+      "name": "Sarenne",
+      "type": "piste",
+      "longueur_m": 1088.932238423368,
+      "denivele_m": 0,
+      "duree_min": 2.2686088300486835,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "advanced"
+    },
+    {
+      "source": "(942350, 6445850)",
+      "target": "(941450, 6444650)",
+      "name": "Escapade",
+      "type": "piste",
+      "longueur_m": 1146.3215719795946,
+      "denivele_m": 0,
+      "duree_min": 2.3881699416241555,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(942850, 6446500)",
+      "target": "(942650, 6446850)",
+      "name": "Pré-rond",
+      "type": "piste",
+      "longueur_m": 888.6112163264798,
+      "denivele_m": 0,
+      "duree_min": 1.8512733673468331,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(941050, 6448750)",
+      "target": "(940650, 6448450)",
+      "name": "Petite Sure",
+      "type": "piste",
+      "longueur_m": 290.0012976245059,
+      "denivele_m": 0,
+      "duree_min": 0.604169370051054,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    },
+    {
+      "source": "(939500, 6448450)",
+      "target": "(939300, 6448700)",
+      "name": "Villard",
+      "type": "piste",
+      "longueur_m": 656.5116126056774,
+      "denivele_m": 0,
+      "duree_min": 1.367732526261828,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "easy"
+    },
+    {
+      "source": "(941050, 6449800)",
+      "target": "(940650, 6448450)",
+      "name": "Snowpark de Marcel",
+      "type": "piste",
+      "longueur_m": 300.1190051147915,
+      "denivele_m": 0,
+      "duree_min": 0.6252479273224822,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "novice"
+    },
+    {
+      "source": "(941850, 6445900)",
+      "target": "(941250, 6445500)",
+      "name": "Le Rosai",
+      "type": "piste",
+      "longueur_m": 645.7184217309507,
+      "denivele_m": 0,
+      "duree_min": 1.3452467119394806,
+      "attente_min": 0.0,
+      "score": 0.0,
+      "difficulty": "intermediate"
+    }
+  ]
+}

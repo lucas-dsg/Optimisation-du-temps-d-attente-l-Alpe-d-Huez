@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkiRoute — Alpe d'Huez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & tokens ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --snow:    #f2f0ec;
+      --ice:     #dde8f0;
+      --slate:   #2c3e50;
+      --alpine:  #1a2e3b;
+      --glacier: #4a7fa5;
+      --lift:    #c0392b;
+      --run:     #27ae60;
+      --gold:    #d4a843;
+      --shadow:  rgba(26,46,59,.12);
+      --radius:  6px;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--snow);
+      color: var(--alpine);
+      font-family: var(--font-mono);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── Texture de fond ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 10%, rgba(74,127,165,.08) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 10% 90%, rgba(26,46,59,.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Header ─── */
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 3.5rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(44,62,80,.1);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo-mark svg {
+      width: 32px;
+      height: 32px;
+      color: var(--glacier);
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: .75rem;
+      font-weight: 300;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--glacier);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--alpine);
+      letter-spacing: -.02em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--glacier);
+    }
+
+    .tagline {
+      margin-top: .8rem;
+      font-size: .8rem;
+      letter-spacing: .12em;
+      color: var(--slate);
+      opacity: .7;
+      text-transform: uppercase;
+    }
+
+    /* ─── Layout ─── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    /* ─── Card ─── */
+    .card {
+      background: #fff;
+      border: 1px solid rgba(44,62,80,.09);
+      border-radius: 12px;
+      box-shadow: 0 4px 24px var(--shadow), 0 1px 3px rgba(0,0,0,.04);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 1.4rem 1.8rem 1rem;
+      border-bottom: 1px solid rgba(44,62,80,.07);
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+
+    .card-header .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--glacier);
+      flex-shrink: 0;
+    }
+
+    .card-header h2 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: .05em;
+      color: var(--slate);
+    }
+
+    .card-body { padding: 1.8rem; }
+
+    /* ─── Formulaire ─── */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem 1.5rem;
+    }
+
+    @media (max-width: 560px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      opacity: .8;
+    }
+
+    select, input[type="range"] {
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    select {
+      background: var(--snow);
+      border: 1px solid rgba(44,62,80,.18);
+      border-radius: var(--radius);
+      padding: .65rem .9rem;
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      color: var(--alpine);
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%232c3e50'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .9rem center;
+      padding-right: 2.2rem;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--glacier);
+      box-shadow: 0 0 0 3px rgba(74,127,165,.15);
+    }
+
+    /* Slider */
+    .slider-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .slider-value {
+      font-size: 1.5rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--alpine);
+      letter-spacing: -.02em;
+    }
+
+    .slider-value span {
+      font-size: .9rem;
+      font-weight: 300;
+      color: var(--slate);
+      opacity: .7;
+      margin-left: .2rem;
+    }
+
+    input[type="range"] {
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(to right, var(--glacier) 0%, var(--glacier) var(--pct, 33%), rgba(44,62,80,.15) var(--pct, 33%));
+      cursor: pointer;
+      transition: background .1s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--glacier);
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(74,127,165,.4);
+      transition: transform .15s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .slider-ticks {
+      display: flex;
+      justify-content: space-between;
+      font-size: .65rem;
+      color: var(--slate);
+      opacity: .5;
+      letter-spacing: .06em;
+    }
+
+    /* Nombre de remontées */
+    .stepper {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      background: var(--snow);
+      border: 1px solid rgba(44,62,80,.18);
+      border-radius: var(--radius);
+      padding: .5rem .7rem;
+      width: fit-content;
+    }
+
+    .stepper button {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(44,62,80,.2);
+      background: #fff;
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--slate);
+      transition: background .15s, border-color .15s;
+    }
+
+    .stepper button:hover {
+      background: var(--glacier);
+      border-color: var(--glacier);
+      color: #fff;
+    }
+
+    .stepper .val {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      min-width: 2rem;
+      text-align: center;
+      color: var(--alpine);
+    }
+
+    /* CTA */
+    .btn-optimize {
+      width: 100%;
+      margin-top: 1.8rem;
+      padding: 1rem 2rem;
+      background: var(--alpine);
+      color: var(--snow);
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: .7rem;
+      transition: background .2s, transform .1s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-optimize::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,.06));
+    }
+
+    .btn-optimize:hover { background: var(--glacier); }
+    .btn-optimize:active { transform: scale(.99); }
+    .btn-optimize:disabled { background: rgba(44,62,80,.3); cursor: not-allowed; }
+
+    .btn-optimize svg { width: 16px; height: 16px; }
+
+    /* Spinner */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      display: none;
+    }
+
+    .loading .spinner { display: block; }
+    .loading .btn-label { display: none; }
+
+    /* ─── Résultats ─── */
+    #results { margin-top: 1.8rem; }
+
+    /* Stats bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 560px) {
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid rgba(44,62,80,.09);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .stat-label {
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      opacity: .6;
+      margin-bottom: .4rem;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--alpine);
+    }
+
+    .stat-unit {
+      font-size: .75rem;
+      font-weight: 300;
+      color: var(--slate);
+      opacity: .7;
+      margin-left: .15rem;
+    }
+
+    .stat.highlight { border-color: var(--glacier); }
+    .stat.highlight .stat-value { color: var(--glacier); }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2.2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: .7rem;
+      top: .8rem;
+      bottom: .8rem;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--glacier), rgba(74,127,165,.1));
+    }
+
+    .tl-step {
+      position: relative;
+      padding: .8rem 0 .8rem .6rem;
+      opacity: 0;
+      transform: translateX(-8px);
+      animation: fadeSlide .3s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -1.95rem;
+      top: 1.05rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px currentColor;
+      z-index: 1;
+    }
+
+    .tl-step.remontee .tl-dot { color: var(--lift); background: var(--lift); }
+    .tl-step.piste    .tl-dot { color: var(--run);  background: var(--run);  }
+
+    .tl-header {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: .2rem;
+    }
+
+    .tl-num {
+      font-size: .62rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: var(--slate);
+      opacity: .4;
+      min-width: 1.4rem;
+    }
+
+    .tl-name {
+      font-family: var(--font-display);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--alpine);
+      flex: 1;
+    }
+
+    .badge {
+      font-size: .6rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .2rem .5rem;
+      border-radius: 3px;
+    }
+
+    .badge.remontee { background: rgba(192,57,43,.1); color: var(--lift); }
+    .badge.piste    { background: rgba(39,174,96,.1);  color: var(--run);  }
+
+    .tl-meta {
+      display: flex;
+      gap: 1.2rem;
+      font-size: .72rem;
+      color: var(--slate);
+      opacity: .65;
+      padding-left: 2rem;
+    }
+
+    .tl-meta strong { color: var(--alpine); opacity: .9; font-weight: 500; }
+
+    /* Séparateur de transition */
+    .tl-transition {
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: .15rem 0 .15rem 2rem;
+      opacity: .8;
+    }
+
+    /* Message d'erreur */
+    .error-box {
+      background: rgba(192,57,43,.06);
+      border: 1px solid rgba(192,57,43,.2);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      font-size: .82rem;
+      color: var(--lift);
+      display: flex; gap: .6rem; align-items: flex-start;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      color: var(--slate);
+      opacity: .4;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M16 3 L28 26 H4 Z" />
+      <path d="M10 18 L16 10 L22 18" />
+    </svg>
+    <span class="logo-text">SkiRoute</span>
+  </div>
+  <h1>Votre journée,<br /><em>sans attente</em></h1>
+  <p class="tagline">Optimisation d'itinéraire par programmation entière</p>
+</header>
+
+<main class="page">
+
+  <!-- Formulaire -->
+  <div class="card">
+    <div class="card-header">
+      <div class="dot"></div>
+      <h2>Paramètres de la journée</h2>
+    </div>
+    <div class="card-body">
+      <div class="form-grid">
+
+        <!-- Station -->
+        <div class="field">
+          <label>Station</label>
+          <select id="sel-station">
+            <option value="alpe_dhuez">Alpe d'Huez</option>
+          </select>
+        </div>
+
+        <!-- Zone de départ -->
+        <div class="field">
+          <label>Zone de départ</label>
+          <select id="sel-node">
+            <option value="">Chargement…</option>
+          </select>
+        </div>
+
+        <!-- Budget temps -->
+        <div class="field full">
+          <label>Budget temps</label>
+          <div class="slider-wrap">
+            <div class="slider-value" id="budget-display">4h00<span>de ski</span></div>
+            <input type="range" id="sl-budget" min="1" max="10" step="0.5" value="4" />
+            <div class="slider-ticks">
+              <span>1h</span><span>3h</span><span>5h</span><span>7h</span><span>10h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nombre de remontées -->
+        <div class="field">
+          <label>Remontées minimum</label>
+          <div class="stepper">
+            <button id="dec-lifts" aria-label="Diminuer">−</button>
+            <span class="val" id="lifts-val">4</span>
+            <button id="inc-lifts" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn-optimize" id="btn-go">
+        <div class="spinner"></div>
+        <span class="btn-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Calculer l'itinéraire optimal
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Résultats -->
+  <div id="results"></div>
+
+</main>
+
+<footer>Optimisation par programmation entière mixte · Gurobi · Données Alpe d'Huez</footer>
+
+<script>
+  const API = '';  // même origine ; changer en 'http://localhost:8000' si besoin
+
+  // ── Chargement des nœuds ──────────────────────────────────────────
+  const selStation = document.getElementById('sel-station');
+  const selNode    = document.getElementById('sel-node');
+
+  async function loadNodes(station) {
+    selNode.innerHTML = '<option value="">Chargement…</option>';
+    try {
+      const res  = await fetch(`${API}/nodes/${station}`);
+      const data = await res.json();
+      selNode.innerHTML = data.map(n =>
+        `<option value="${n.id}">${n.label || n.id}</option>`
+      ).join('');
+    } catch {
+      selNode.innerHTML = '<option value="">Erreur de chargement</option>';
+    }
+  }
+
+  selStation.addEventListener('change', () => loadNodes(selStation.value));
+  loadNodes(selStation.value);
+
+  // Charger aussi les stations disponibles
+  (async () => {
+    try {
+      const res = await fetch(`${API}/stations`);
+      const stations = await res.json();
+      selStation.innerHTML = stations.map(s =>
+        `<option value="${s.id}">${s.label}</option>`
+      ).join('');
+      if (stations.length) loadNodes(stations[0].id);
+    } catch { /* garde l'option par défaut */ }
+  })();
+
+  // ── Slider budget ─────────────────────────────────────────────────
+  const slBudget   = document.getElementById('sl-budget');
+  const budgetDisp = document.getElementById('budget-display');
+
+  function updateSlider() {
+    const v   = parseFloat(slBudget.value);
+    const h   = Math.floor(v);
+    const m   = Math.round((v - h) * 60);
+    const pct = ((v - 1) / (10 - 1)) * 100;
+    slBudget.style.setProperty('--pct', pct + '%');
+    budgetDisp.innerHTML = m > 0
+      ? `${h}h${String(m).padStart(2,'0')}<span>de ski</span>`
+      : `${h}h00<span>de ski</span>`;
+  }
+
+  slBudget.addEventListener('input', updateSlider);
+  updateSlider();
+
+  // ── Stepper remontées ──────────────────────────────────────────────
+  let minLifts = 4;
+  const liftsVal = document.getElementById('lifts-val');
+
+  document.getElementById('inc-lifts').addEventListener('click', () => {
+    minLifts = Math.min(20, minLifts + 1);
+    liftsVal.textContent = minLifts;
+  });
+  document.getElementById('dec-lifts').addEventListener('click', () => {
+    minLifts = Math.max(1, minLifts - 1);
+    liftsVal.textContent = minLifts;
+  });
+
+  // ── Optimisation ──────────────────────────────────────────────────
+  const btnGo  = document.getElementById('btn-go');
+  const results = document.getElementById('results');
+
+  btnGo.addEventListener('click', async () => {
+    btnGo.disabled = true;
+    btnGo.classList.add('loading');
+    results.innerHTML = '';
+
+    const payload = {
+      station:      selStation.value,
+      start_node:   selNode.value || null,
+      budget_hours: parseFloat(slBudget.value),
+      min_lifts:    minLifts,
+    };
+
+    try {
+      const res  = await fetch(`${API}/optimize`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        showError(err.detail || 'Erreur serveur');
+        return;
+      }
+
+      const data = await res.json();
+      showResults(data);
+
+    } catch (e) {
+      showError('Impossible de joindre le serveur. Vérifiez que l\'API tourne sur le bon port.');
+    } finally {
+      btnGo.disabled = false;
+      btnGo.classList.remove('loading');
+    }
+  });
+
+  // ── Affichage des résultats ────────────────────────────────────────
+  function fmtMin(m) {
+    const h = Math.floor(m / 60);
+    const mn = Math.round(m % 60);
+    return h > 0 ? `${h}h${String(mn).padStart(2,'0')}` : `${mn}min`;
+  }
+
+  function showResults(d) {
+    const html = `
+      <div class="stats-bar">
+        <div class="stat highlight">
+          <div class="stat-label">Attente totale</div>
+          <div class="stat-value">${Math.round(d.total_wait_min)}<span class="stat-unit">min</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Durée totale</div>
+          <div class="stat-value">${fmtMin(d.total_duration_min)}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Remontées</div>
+          <div class="stat-value">${d.nb_lifts}<span class="stat-unit">télésièges</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Descentes</div>
+          <div class="stat-value">${d.nb_runs}<span class="stat-unit">pistes</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="dot"></div>
+          <h2>Itinéraire — ${d.itinerary.length} étapes</h2>
+        </div>
+        <div class="card-body">
+          <div class="timeline">
+            ${d.itinerary.map((step, i) => {
+              const prev = d.itinerary[i - 1];
+              const transition = prev && prev.type !== step.type
+                ? `<div class="tl-transition">↓ ${step.type === 'piste' ? 'Descente' : 'Remontée'}</div>`
+                : '';
+              return `
+                ${transition}
+                <div class="tl-step ${step.type}" style="animation-delay:${i * 60}ms">
+                  <div class="tl-dot"></div>
+                  <div class="tl-header">
+                    <span class="tl-num">${String(i+1).padStart(2,'0')}</span>
+                    <span class="tl-name">${step.name}</span>
+                    <span class="badge ${step.type}">${step.type === 'remontee' ? '⬆ Remontée' : '⬇ Piste'}</span>
+                  </div>
+                  <div class="tl-meta">
+                    <span>Durée <strong>${step.duree_min}min</strong></span>
+                    ${step.attente_min > 0 ? `<span>Attente <strong>${step.attente_min}min</strong></span>` : ''}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+    results.innerHTML = html;
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function showError(msg) {
+    results.innerHTML = `
+      <div class="error-box">
+        <span>⚠</span>
+        <span>${msg}</span>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>

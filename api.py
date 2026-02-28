@@ -60,9 +60,10 @@ def load_graph(station: str) -> nx.DiGraph:
     for n in data["nodes"]:
         G.add_node(n["id"], x=n["x"], y=n["y"], name=n.get("name", ""))
     for e in data["edges"]:
-        G.add_edge(e["source"], e["target"], **{
-            k: v for k, v in e.items() if k not in ("source", "target")
-        })
+        attrs = {k: v for k, v in e.items() if k not in ("source", "target")}
+        if not isinstance(attrs.get("name"), str):
+            attrs["name"] = ""
+        G.add_edge(e["source"], e["target"], **attrs)
 
     # Simulation des temps d'attente (remplacer par données réelles)
     rng = random.Random(42)
@@ -138,14 +139,34 @@ def list_stations():
 def list_nodes(station: str):
     """Retourne les nœuds disponibles pour une station (pour le sélecteur de départ)."""
     G = load_graph(station)
+
+    # Construire des labels lisibles depuis les arcs (remontées qui partent / arrivent)
+    lifts_up  = {}   # nœud source → noms des remontées qui partent
+    lifts_arr = {}   # nœud cible  → noms des remontées qui arrivent
+
+    for u, v, d in G.edges(data=True):
+        name = d.get("name", "")
+        if d.get("type") == "remontee" and isinstance(name, str) and name and name != "Piste injectée":
+            lifts_up.setdefault(u, []).append(name)
+            lifts_arr.setdefault(v, []).append(name)
+
+    def node_label(n):
+        if n in lifts_up:
+            names = " / ".join(sorted(set(lifts_up[n]))[:2])
+            return f"Bas · {names}"
+        if n in lifts_arr:
+            names = " / ".join(sorted(set(lifts_arr[n]))[:2])
+            return f"Haut · {names}"
+        return str(n)
+
     nodes = []
     for n in G.nodes():
         out_deg = G.out_degree(n)
-        if out_deg > 0:  # On n'expose que les nœuds depuis lesquels on peut partir
-            label = G.nodes[n].get("name") or str(n)
-            nodes.append({"id": str(n), "label": label, "out_degree": out_deg})
-    # Trier par degré décroissant (les nœuds les plus connectés en premier)
-    nodes.sort(key=lambda x: -x["out_degree"])
+        if out_deg > 0:
+            nodes.append({"id": str(n), "label": node_label(n), "out_degree": out_deg})
+
+    # Trier : d'abord les bas de remontées (zones de départ naturelles), puis par degré
+    nodes.sort(key=lambda x: (0 if x["label"].startswith("Bas") else 1, -x["out_degree"]))
     return nodes
 
 
@@ -196,7 +217,7 @@ def optimize(req: OptimizeRequest):
     # Le facteur 0.01 garantit que l'attente n'influence jamais le choix
     # du nombre d'étapes (1 min d'attente << 1 min de ski supplémentaire)
     model.setObjective(
-        -total_time_expr + 0.01 * total_wait_expr,
+        -total_time_expr + 0.5 * total_wait_expr,
         gp.GRB.MINIMIZE
     )
 

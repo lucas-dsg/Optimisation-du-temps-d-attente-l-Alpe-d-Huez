@@ -55,7 +55,13 @@ Et reçoit en retour un itinéraire complet, étape par étape, avec les temps d
 | … | … | … | … | … |
 | **Total** | | | **3h58** | **38 min** |
 
-Sur le PoC déjà conçu, on peut avoir une idée de comment va fonctionner le site 
+Sur le PoC déjà conçu, on peut avoir une idée de comment va fonctionner le site :
+<img width="660" height="764" alt="image" src="https://github.com/user-attachments/assets/0460f22e-6ab5-483e-9bf2-fb5f2a7ad5c4" />
+<img width="644" height="780" alt="image" src="https://github.com/user-attachments/assets/f30b369b-a3b8-4c57-83d7-2fcb65ca4573" />
+<img width="654" height="550" alt="image" src="https://github.com/user-attachments/assets/ebec4982-7ee4-4d67-9708-74e917793799" />
+
+
+
 ---
 
 ## Ce que nous demandons

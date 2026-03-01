@@ -580,6 +580,54 @@
           </div>
         </div>
 
+        <!-- Heure de départ -->
+        <div class="field">
+          <label>Heure de départ</label>
+          <select id="sel-heure">
+            <option value="9">09h00</option>
+            <option value="10" selected>10h00</option>
+            <option value="11">11h00</option>
+            <option value="12">12h00</option>
+            <option value="13">13h00</option>
+            <option value="14">14h00</option>
+            <option value="15">15h00</option>
+            <option value="16">16h00</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div class="field">
+          <label>Date</label>
+          <input type="date" id="inp-date" style="
+            background: var(--snow);
+            border: 1px solid rgba(44,62,80,.18);
+            border-radius: var(--radius);
+            padding: .65rem .9rem;
+            font-family: var(--font-mono);
+            font-size: .82rem;
+            color: var(--alpine);
+            width: 100%;
+            cursor: pointer;
+          " />
+        </div>
+
+        <!-- Météo -->
+        <div class="field full">
+          <label>Météo prévue</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:.2rem">
+            <div class="slider-wrap">
+              <div class="slider-value" id="sun-display">☀ 70%<span>ensoleillement</span></div>
+              <input type="range" id="sl-sun" min="0" max="100" step="5" value="70" />
+              <div class="slider-ticks"><span>Couvert</span><span>Grand beau</span></div>
+            </div>
+            <div class="slider-wrap">
+              <div class="slider-value" id="temp-display">−5°<span>en station</span></div>
+              <input type="range" id="sl-temp" min="-25" max="10" step="1" value="-5" />
+              <div class="slider-ticks"><span>−25°</span><span>+10°</span></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <button class="btn-optimize" id="btn-go">
@@ -654,6 +702,35 @@
   slBudget.addEventListener('input', updateSlider);
   updateSlider();
 
+  // ── Date par défaut = aujourd'hui ─────────────────────────────────
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('inp-date').value = today;
+
+  // ── Sliders météo ─────────────────────────────────────────────────
+  const slSun  = document.getElementById('sl-sun');
+  const slTemp = document.getElementById('sl-temp');
+
+  slSun.addEventListener('input', () => {
+    const v = slSun.value;
+    const pct = ((v - 0) / 100) * 100;
+    slSun.style.setProperty('--pct', pct + '%');
+    document.getElementById('sun-display').innerHTML =
+      `☀ ${v}%<span>ensoleillement</span>`;
+  });
+
+  slTemp.addEventListener('input', () => {
+    const v = parseInt(slTemp.value);
+    const pct = ((v + 25) / 35) * 100;
+    slTemp.style.setProperty('--pct', pct + '%');
+    const sign = v > 0 ? '+' : '';
+    document.getElementById('temp-display').innerHTML =
+      `${sign}${v}°<span>en station</span>`;
+  });
+
+  // Init sliders météo
+  slSun.dispatchEvent(new Event('input'));
+  slTemp.dispatchEvent(new Event('input'));
+
   // ── Stepper remontées ──────────────────────────────────────────────
   let minLifts = 4;
   const liftsVal = document.getElementById('lifts-val');
@@ -676,11 +753,19 @@
     btnGo.classList.add('loading');
     results.innerHTML = '';
 
+    // Date par défaut = aujourd'hui
+    const dateVal = document.getElementById('inp-date').value ||
+                    new Date().toISOString().split('T')[0];
+
     const payload = {
-      station:      selStation.value,
-      start_node:   selNode.value || null,
-      budget_hours: parseFloat(slBudget.value),
-      min_lifts:    minLifts,
+      station:        selStation.value,
+      start_node:     selNode.value || null,
+      budget_hours:   parseFloat(slBudget.value),
+      min_lifts:      minLifts,
+      heure_depart:   parseInt(document.getElementById('sel-heure').value),
+      ski_date:       dateVal,
+      ensoleillement: parseInt(document.getElementById('sl-sun').value) / 100,
+      temperature_c:  parseInt(document.getElementById('sl-temp').value),
     };
 
     try {
@@ -697,7 +782,7 @@
       }
 
       const data = await res.json();
-      showResults(data);
+      showResults(data, payload);
 
     } catch (e) {
       showError('Impossible de joindre le serveur. Vérifiez que l\'API tourne sur le bon port.');
@@ -714,8 +799,15 @@
     return h > 0 ? `${h}h${String(mn).padStart(2,'0')}` : `${mn}min`;
   }
 
-  function showResults(d) {
+  function showResults(d, payload) {
     const html = `
+      <div id="ml-badge" style="
+        font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+        color:var(--glacier); margin-bottom:.8rem; display:flex; align-items:center; gap:.4rem;
+      ">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--run);display:inline-block"></span>
+        Attentes prédites par modèle ML · ${payload.ski_date} · ${payload.heure_depart}h00
+      </div>
       <div class="stats-bar">
         <div class="stat highlight">
           <div class="stat-label">Attente totale</div>
@@ -782,3 +874,4 @@
 </script>
 </body>
 </html>
+

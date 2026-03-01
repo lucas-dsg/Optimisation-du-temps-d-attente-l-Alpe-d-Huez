@@ -1,6 +1,6 @@
 # Optiski — Optimisation d'itinéraire skiable par intelligence artificielle
 
-> Projet de recherche appliquée · Alpe d'Huez · 2025  
+> Projet de recherche opérationnelle · Alpe d'Huez · 2026  
 > *Lucas Desgranges — CentraleSupélec*
 
 ---
@@ -55,6 +55,7 @@ Et reçoit en retour un itinéraire complet, étape par étape, avec les temps d
 | … | … | … | … | … |
 | **Total** | | | **3h58** | **38 min** |
 
+Sur le PoC déjà conçu, on peut avoir une idée de comment va fonctionner le site 
 ---
 
 ## Ce que nous demandons

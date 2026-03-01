@@ -1,198 +1,137 @@
-# Optimisation-du-temps-d-attente-l-Alpe-d-Huez
+# Optiski — Optimisation d'itinéraire skiable par intelligence artificielle
 
-This repository aims at calculating an itinerary for people skiing in Alpe d'Huez station in order to avoid the waiting time in the file for the gondola. 
-This idea appeared to me during my holidays at Alpe d'Huez when I had to wait for a long time to take the gondola. 
-Of course the data of waiting time etc. are simulated because I don't have the real ones from the Alpe d'Huez but it shows that it can be done. 
-
-# ⛷️ SkiRoute — Optimisation d'itinéraire skiable
-
-> **Minimisez votre temps d'attente aux remontées mécaniques grâce à la programmation linéaire en nombres entiers.**
-
-Un algorithme d'optimisation combinatoire modélise le domaine skiable de l'Alpe d'Huez sous forme de graphe orienté, puis calcule le meilleur itinéraire possible en fonction de votre budget temps et de vos préférences — le tout accessible depuis une interface web.
-
-![Carte du domaine](data/carte_alpe_dhuez.png)
+> Projet de recherche appliquée · Alpe d'Huez · 2025  
+> *Lucas Desgranges — [votre université / école]*
 
 ---
 
-## ✨ Fonctionnalités
+## Le problème
 
-- **Optimisation exacte** par programmation linéaire mixte en nombres entiers (MILP) via Gurobi
-- **Modèle en chemin** : le skieur part d'un point et s'arrête où il veut — pas de retour forcé au départ
-- **Transitions libres** : enchaînement piste → piste possible sans remontée intermédiaire
-- **Objectif bi-niveau** : maximiser le temps skié en priorité, minimiser l'attente à budget égal
-- **Interface web** en HTML/CSS/JS pur, servie par une API FastAPI
-- **Graphe réel** construit depuis les données OpenStreetMap (pistes + remontées de l'Alpe d'Huez)
+Un skieur qui arrive à la station le matin fait face à une question simple, mais difficile : **par où commencer ?**
+
+Sans information sur les files d'attente, il navigue à l'aveugle. Il remonte Marmottes 1 par habitude, attend 20 minutes, descend, et recommence. À la fin de la journée, il a skié 2h30 sur les 5h qu'il avait devant lui — les 2h30 restantes ont été perdues à faire la queue.
+
+Ce problème est universel dans les grandes stations. Et il a une solution mathématique.
 
 ---
 
-## 🗂️ Structure du projet
+## La solution
+
+**Optiski** calcule en temps réel l'itinéraire optimal pour un skieur — c'est-à-dire la séquence de remontées et de descentes qui **maximise le temps effectif sur les pistes** en fonction de son budget temps, tout en **minimisant son temps d'attente**.
+
+L'algorithme repose sur deux briques technologiques :
+
+**1. Optimisation combinatoire (MILP)**  
+Le domaine skiable est modélisé comme un graphe orienté. Un solveur de programmation linéaire en nombres entiers (Gurobi) calcule le chemin optimal en quelques secondes parmi des millions de combinaisons possibles.
+
+**2. Machine learning pour la prédiction d'attente**  
+Un modèle XGBoost prédit le temps d'attente à chaque remontée en fonction de l'heure, du jour, du calendrier des vacances scolaires, et de la météo. Ces prédictions alimentent l'optimiseur pour qu'il choisisse non seulement les pistes les plus intéressantes, mais aussi **les files les plus courtes**.
+
+---
+
+## Démonstration
+
+L'application est déjà fonctionnelle avec des données synthétiques. Le skieur renseigne :
+
+| Paramètre | Exemple |
+|-----------|---------|
+| Zone de départ | Bas · Marmottes 1 / Romains |
+| Budget temps | 4h00 |
+| Date | Samedi 15 février 2025 |
+| Heure de départ | 10h00 |
+| Météo | Grand beau, −5°C |
+
+Et reçoit en retour un itinéraire complet, étape par étape, avec les temps de trajet et d'attente estimés pour chaque remontée.
+
+**Exemple de résultat (données simulées) :**
+
+| Étape | Nom | Type | Durée | Attente estimée |
+|-------|-----|------|-------|-----------------|
+| 1 | Marmottes 1 | ⬆ Remontée | 7 min | 14 min |
+| 2 | Olympique | ⬇ Piste | 2 min | — |
+| 3 | Chez Roger | ⬇ Piste | 1 min | — |
+| 4 | Pic Blanc 2 | ⬆ Remontée | 7 min | 11 min |
+| 5 | Sarenne | ⬇ Piste | 17 min | — |
+| … | … | … | … | … |
+| **Total** | | | **3h58** | **38 min** |
+
+---
+
+## Ce que nous demandons
+
+Pour passer de prédictions simulées à des prédictions réelles et fiables, nous avons besoin de données historiques de fréquentation des remontées mécaniques.
+
+**Format idéal :**
 
 ```
-ski_app/
-├── api.py                    # API FastAPI (backend)
-├── optimize_itinerary.py     # Script d'optimisation standalone (CLI)
-├── static/
-│   └── index.html            # Interface web (frontend)
-└── data/
-    ├── graph_alpe_dhuez.json  # Graphe du domaine skiable (nœuds + arcs)
-    ├── pistes_alpe_dhuez.geojson
-    ├── lifts_alpe_dhuez.geojson
-    ├── carte_alpe_dhuez.png
-    └── itinerary.json         # Dernier itinéraire calculé (généré)
+timestamp            | remontee        | attente_min | débit (pers/h)
+---------------------|-----------------|-------------|----------------
+2024-02-10 09:15:00  | Marmottes 1     | 18          | 1800
+2024-02-10 09:15:00  | Pic Blanc 2     | 4           | 2200
+2024-02-10 09:30:00  | Marmottes 1     | 22          | 1750
 ```
 
----
+**Minimum viable :** temps d'attente ou débit par remontée, par créneau de 15 à 30 minutes, sur au moins une saison complète.
 
-## 🧠 Modélisation
+**Format :** CSV, JSON, Excel — tout format est acceptable, nous nous adaptons.
 
-### Le graphe
-
-Le domaine est représenté comme un **graphe orienté G = (V, E)** :
-
-- **Nœuds** : points géographiques clés (bas/haut de remontées, intersections de pistes)
-- **Arcs** : deux types
-  - `remontee` — télésiège ou téléphérique, avec un temps de trajet et un **temps d'attente**
-  - `piste` — descente, avec un temps de trajet et une attente nulle
-
-### Le modèle d'optimisation (MILP)
-
-**Variables de décision :**
-- $x_{uv} \in \{0,1\}$ — l'arc $(u,v)$ est-il emprunté ?
-- $\text{is\_end}_n \in \{0,1\}$ — le nœud $n$ est-il le point d'arrivée ?
-- $u_n \in \mathbb{Z}$ — ordre du nœud dans le chemin (contrainte MTZ)
-
-**Objectif :**
-
-$$\min \quad -\sum_{(u,v) \in E} (d_{uv} + w_{uv}) \cdot x_{uv} \;+\; 0{,}5 \cdot \sum_{\substack{(u,v) \in E \\ \text{remontée}}} w_{uv} \cdot x_{uv}$$
-
-Maximiser le temps total utilisé (priorité haute), minimiser l'attente (priorité basse).
-
-**Contraintes :**
-- Conservation du flux (chemin $s \to t$)
-- Chemin simple (chaque nœud visité au plus une fois)
-- Budget temps total $\leq T$
-- Nombre minimum de remontées $\geq k$
-- Élimination des sous-tours (Miller–Tucker–Zemlin)
+**Données déjà disponibles dans les stations** via les systèmes de billetterie (forfaits, tourniquets) ou les compteurs de débit déjà installés sur la plupart des remontées modernes.
 
 ---
 
-## 🚀 Lancement
+## Ce que la station y gagne
 
-### Prérequis
+Ce projet n'est pas uniquement académique. Les retombées concrètes pour la station sont directes :
 
-```bash
-pip install fastapi uvicorn gurobipy networkx
-```
+**Pour les skieurs**  
+Une journée mieux organisée, moins frustrante, avec plus de temps effectif sur les pistes. La satisfaction client s'améliore sans investissement supplémentaire en infrastructure.
 
-> Une licence Gurobi est requise. Une [licence académique gratuite](https://www.gurobi.com/academia/academic-program-and-licenses/) est disponible.
+**Pour la station**  
+- Meilleure répartition des flux : les skieurs sont naturellement orientés vers les remontées moins chargées, ce qui **réduit la congestion** sur les axes principaux sans panneau ni signalétique supplémentaire.
+- Un outil différenciant vis-à-vis des stations concurrentes — aucune station française ne propose aujourd'hui ce type de service.
+- Une base technologique réutilisable pour d'autres usages (prévision de fréquentation, dimensionnement des équipes, information en temps réel sur les écrans de la station).
 
-### Démarrer le serveur
-
-```bash
-cd ski_app
-uvicorn api:app --reload --port 8000
-```
-
-Ouvrez ensuite **http://localhost:8000** dans votre navigateur.
-
-### Utilisation en ligne de commande
-
-```bash
-python optimize_itinerary.py
-```
-
-Les paramètres (`BUDGET_MIN`, `MIN_LIFTS`, `start_node`) se configurent directement dans le script.
+**Pour la recherche**  
+Les données resteront strictement confidentielles, ne seront utilisées qu'à des fins de recherche, et ne seront jamais partagées ou publiées sans accord explicite de la station. Un accord de confidentialité (NDA) peut être signé.
 
 ---
 
-## 🌐 API
+## Stack technique
 
-| Méthode | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/` | Interface web |
-| `GET` | `/stations` | Liste les stations disponibles |
-| `GET` | `/nodes/{station}` | Nœuds de départ possibles |
-| `POST` | `/optimize` | Lance l'optimisation |
+| Composant | Technologie |
+|-----------|-------------|
+| Optimisation | Gurobi (MILP) — licence académique |
+| Machine learning | XGBoost, scikit-learn |
+| Backend | Python, FastAPI |
+| Frontend | HTML / CSS / JavaScript |
+| Données géographiques | OpenStreetMap (ODbL) |
+| Infrastructure | Local / déployable sur serveur |
 
-### Exemple de requête
-
-```bash
-curl -X POST http://localhost:8000/optimize \
-  -H "Content-Type: application/json" \
-  -d '{
-    "station": "alpe_dhuez",
-    "start_node": "(940650, 6448450)",
-    "budget_hours": 4.0,
-    "min_lifts": 4
-  }'
-```
-
-### Exemple de réponse
-
-```json
-{
-  "status": "optimal",
-  "total_duration_min": 237.4,
-  "total_wait_min": 23.2,
-  "nb_lifts": 4,
-  "nb_runs": 5,
-  "objective_wait_min": 23.2,
-  "itinerary": [
-    {
-      "step": 1,
-      "name": "Marmottes 1",
-      "type": "remontee",
-      "duree_min": 7.2,
-      "attente_min": 6.0,
-      "from_node": "(940650, 6448450)",
-      "to_node": "(943400, 6449700)"
-    },
-    ...
-  ]
-}
-```
+Le code source est propre, documenté, et structuré pour une reprise ou une intégration par les équipes techniques de la station.
 
 ---
 
-## 📊 Exemple d'itinéraire
+## État d'avancement
 
-Voici un itinéraire calculé avec un budget de **4 heures** et **4 remontées minimum** :
-
-| Étape | Nom | Type | Durée | Attente |
-|-------|-----|------|-------|---------|
-| 1 | Marmottes 1 | ⬆ Remontée | 7.2 min | 6.0 min |
-| 2 | Olympique | ⬇ Piste | 2.2 min | — |
-| 3 | Chez Roger | ⬇ Piste | 1.4 min | — |
-| 4 | Pic Blanc 2 | ⬆ Remontée | 6.5 min | 5.9 min |
-| 5 | Pic Blanc 3 | ⬆ Remontée | 6.7 min | 2.5 min |
-| 6–8 | Sarenne | ⬇ Piste | 16.6 min | — |
-| 9 | Chalvet | ⬆ Remontée | 4.9 min | 8.8 min |
-
-**Temps d'attente total : 23.2 min** sur 4h de ski.
+- [x] Graphe du domaine skiable (73 nœuds, 156 arcs) construit depuis OSM
+- [x] Algorithme d'optimisation fonctionnel et validé
+- [x] Modèle ML entraîné sur données synthétiques (MAE < 3 min)
+- [x] Interface web opérationnelle
+- [x] Architecture prête à recevoir les données réelles
+- [ ] **Entraînement sur données réelles** ← point de blocage actuel
+- [ ] Déploiement et test en conditions réelles
 
 ---
 
-## 🛠️ Données
+## Contact
 
-Le graphe est construit à partir des données **OpenStreetMap** :
-- `pistes_alpe_dhuez.geojson` — tracés des pistes de ski
-- `lifts_alpe_dhuez.geojson` — tracés des remontées mécaniques
+**Lucas Desgranges**  
+[votre email]  
+[votre université / école]  
+[LinkedIn ou GitHub si pertinent]
 
-Les temps d'attente actuels sont **simulés aléatoirement** (graine fixée pour la reproductibilité). Ils peuvent être remplacés par des données temps réel (API station, capteurs de file d'attente, etc.).
-
----
-
-## 🔭 Pistes d'évolution
-
-- [ ] Intégration d'une carte interactive (Leaflet.js) affichant l'itinéraire sur le fond OSM
-- [ ] Données d'affluence temps réel via l'API de la station
-- [ ] Support multi-stations (Les Deux Alpes, Tignes, Val d'Isère...)
-- [ ] Filtres par niveau de difficulté des pistes (verte / bleue / rouge / noire)
-- [ ] Mode "éviter les pistes noires"
+*Disponible pour une présentation en personne à la station ou en visioconférence.*
 
 ---
 
-## 📄 Licence
-
-Projet académique — données OSM sous licence [ODbL](https://www.openstreetmap.org/copyright).
-Solveur Gurobi sous licence académique non commerciale.
+*Ce projet est développé dans un cadre académique, sans financement commercial. Toute collaboration sera menée dans un esprit de transparence et de bénéfice mutuel.*

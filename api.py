@@ -71,6 +71,14 @@ def load_graph(station: str) -> nx.DiGraph:
             attrs["name"] = ""
         G.add_edge(e["source"], e["target"], **attrs)
 
+    # Simulation des temps d'attente (remplacer par données réelles)
+    rng = random.Random(42)
+    for u, v, d in G.edges(data=True):
+        if d["type"] == "remontee":
+            d["attente_min"] = round(rng.uniform(2, 20), 1)
+        else:
+            d["attente_min"] = 0.0
+
     GRAPHS[station] = G
     return G
 
@@ -91,8 +99,7 @@ class OptimizeRequest(BaseModel):
     start_node: Optional[str] = Field(None, description="ID du nœud de départ (null = auto)")
     budget_hours: float = Field(4.0, ge=0.5, le=10.0, description="Budget temps en heures")
     min_lifts: int = Field(3, ge=1, le=20, description="Nombre minimum de remontées")
-    # Paramètres pour la prédiction ML
-    heure_depart: int = Field(9, ge=9, le=16, description="Heure de début de ski (9-16)")
+    heure_depart: int = Field(10, ge=9, le=16, description="Heure de début de ski (9-16)")
     ski_date: Optional[str] = Field(None, description="Date du ski (YYYY-MM-DD, défaut=aujourd'hui)")
     ensoleillement: float = Field(0.7, ge=0.0, le=1.0, description="Ensoleillement (0=couvert, 1=grand beau)")
     temperature_c: float = Field(-5.0, ge=-25.0, le=10.0, description="Température en station (°C)")
@@ -142,14 +149,31 @@ def list_stations():
 def list_nodes(station: str):
     """Retourne les nœuds disponibles pour une station (pour le sélecteur de départ)."""
     G = load_graph(station)
+
+    lifts_up  = {}
+    lifts_arr = {}
+    for u, v, d in G.edges(data=True):
+        name = d.get("name", "")
+        if d.get("type") == "remontee" and isinstance(name, str) and name and name != "Piste injectée":
+            lifts_up.setdefault(u, []).append(name)
+            lifts_arr.setdefault(v, []).append(name)
+
+    def node_label(n):
+        if n in lifts_up:
+            names = " / ".join(sorted(set(lifts_up[n]))[:2])
+            return f"Bas · {names}"
+        if n in lifts_arr:
+            names = " / ".join(sorted(set(lifts_arr[n]))[:2])
+            return f"Haut · {names}"
+        return str(n)
+
     nodes = []
     for n in G.nodes():
         out_deg = G.out_degree(n)
-        if out_deg > 0:  # On n'expose que les nœuds depuis lesquels on peut partir
-            label = G.nodes[n].get("name") or str(n)
-            nodes.append({"id": str(n), "label": label, "out_degree": out_deg})
-    # Trier par degré décroissant (les nœuds les plus connectés en premier)
-    nodes.sort(key=lambda x: -x["out_degree"])
+        if out_deg > 0:
+            nodes.append({"id": str(n), "label": node_label(n), "out_degree": out_deg})
+
+    nodes.sort(key=lambda x: (0 if x["label"].startswith("Bas") else 1, -x["out_degree"]))
     return nodes
 
 
@@ -217,8 +241,9 @@ def optimize(req: OptimizeRequest):
     # Objectif combiné : maximiser le temps utilisé - petite pénalité d'attente
     # Le facteur 0.01 garantit que l'attente n'influence jamais le choix
     # du nombre d'étapes (1 min d'attente << 1 min de ski supplémentaire)
+    # Facteur 0.001 : même 20 min d'attente ne valent jamais 1 min de ski
     model.setObjective(
-        -total_time_expr + 0.5 * total_wait_expr,
+        -total_time_expr + 0.001 * total_wait_expr,
         gp.GRB.MINIMIZE
     )
 

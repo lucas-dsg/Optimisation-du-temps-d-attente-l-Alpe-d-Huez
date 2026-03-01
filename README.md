@@ -1,7 +1,7 @@
 # Optiski — Optimisation d'itinéraire skiable par intelligence artificielle
 
 > Projet de recherche appliquée · Alpe d'Huez · 2025  
-> *Lucas Desgranges — [votre université / école]*
+> *Lucas Desgranges — CentraleSupélec*
 
 ---
 
@@ -81,7 +81,7 @@ timestamp            | remontee        | attente_min | débit (pers/h)
 
 ## Ce que la station y gagne
 
-Ce projet n'est pas uniquement académique. Les retombées concrètes pour la station sont directes :
+Ce projet n'est pas académique, il vient d'une initiative personnelle. Les retombées concrètes pour la station sont directes :
 
 **Pour les skieurs**  
 Une journée mieux organisée, moins frustrante, avec plus de temps effectif sur les pistes. La satisfaction client s'améliore sans investissement supplémentaire en infrastructure.
@@ -126,12 +126,11 @@ Le code source est propre, documenté, et structuré pour une reprise ou une int
 ## Contact
 
 **Lucas Desgranges**  
-[votre email]  
-[votre université / école]  
-[LinkedIn ou GitHub si pertinent]
+lucas.desgranges@student-cs.fr  
+CentraleSupélec 
 
 *Disponible pour une présentation en personne à la station ou en visioconférence.*
 
 ---
 
-*Ce projet est développé dans un cadre académique, sans financement commercial. Toute collaboration sera menée dans un esprit de transparence et de bénéfice mutuel.*
+*Ce projet est développé dans un cadre personnel, sans encadrement académique.*
